@@ -17,6 +17,8 @@ public void Example()
     AndroidOpenUrl.OpenUrl(documentUrl, dataType); // you can specify any MIME type when opening a file by explicitly specifying the dataType parameter
 }
 ```
+The demo project creates the "Test Documents" folder in /storage/emulated/0 and you need to allow external write permission. Open `Player Settings` in your project and change `Write Permission` to `External(SDCard)`.
+
 ## Known errors:
  * **Plugins folder not found**:
    The Editor Script `PackageNameChanger.cs` cannot find the Plugins folder in the root of the Assets folder.
