@@ -12,7 +12,7 @@ The following example demonstrates how to open a file:
 ```csharp
 public void Example()
 {   
-    string dataType = "image/jpeg";
+    string dataType = "application/pdf";
     string documentUrl = "/storage/emulated/0/Test Folder/template.pdf";
     AndroidOpenUrl.OpenUrl(documentUrl, dataType); // you can specify any MIME type when opening a file by explicitly specifying the dataType parameter
 }
