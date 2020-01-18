@@ -1,5 +1,5 @@
 # Unity-Android-Files-Opener
- Unity Android Files Opener allows your android application to open files on local drive with API Level 24 or higher.
+ Unity Android Files Opener allows your android application to open files on local drive with (including API Level 24 or higher).
 
 ## Requirements
  Unity Editor 5 or newer
