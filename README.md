@@ -5,7 +5,7 @@
  Unity Editor 5 or newer
 
 ## Installation
- Add Assets files to your Assets in Unity project.   
+ Add Assets files to your Assets in Unity project.
 
 ## Usage
 The following example demonstrates how to open a file:
@@ -36,6 +36,8 @@ public void Example()
  * A minimum API level of 16 and target API level of 29 was used during testing.
  * If you use the API level below 4.4.4 KitKat and you need External access to files, then you need to set `Write Permission` to `Extarnal(SDCard)` in `Player Settings` of your project.
  * If your project needs to make any changes to your `AndroidManifest.xml`, then consider that the Editor Script `PackageNameChanger.cs` monitors the changes in the Package Name of your project and makes these changes in Plugins/realese.aar/AndroidManifest.xml and Plugins/realese.aar/res/xml/filepaths.xml files
+ * For the health of the asset, the Editor Script `PackageNameChanger.cs` located in the Editor folder is important. 
+   !!! Delete it only if you are not going to change the package name in the project anymore !!!
 
 ## License
 This project is licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
