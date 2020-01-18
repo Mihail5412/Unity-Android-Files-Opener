@@ -1,8 +1,8 @@
 # Unity-Android-Files-Opener
- Unity Android Files Opener allows your android application to open files on local drive with (including API Level 24 or higher).
+ Unity Android Files Opener allows your android application to open files on local drive with (**including API Level 24 or higher**).
 
 ## Requirements
- Unity Editor 5 or newer
+ Unity Editor 2017 or newer
 
 ## Installation
  Add Assets files to your Assets in Unity project.
@@ -11,12 +11,15 @@
 The following example demonstrates how to open a file:
 ```csharp
 public void Example()
-{
+{   
+    string dataType = "application/pdf";
     string documentUrl = "/storage/emulated/0/Test Folder/template.pdf";
-    AndroidOpenUrl.OpenUrl(documentUrl);
+    AndroidOpenUrl.OpenUrl(documentUrl, dataType); // you can specify any MIME type when opening a file by explicitly specifying the dataType parameter
 }
 ```
-## Known errors:
+The demo project creates the "Test Documents" folder in /storage/emulated/0 and you need to allow external write permission. Open `Player Settings` in your project and change `Write Permission` to `External(SDCard)`.
+
+## Known Editor errors:
  * **Plugins folder not found**:
    The Editor Script `PackageNameChanger.cs` cannot find the Plugins folder in the root of the Assets folder.
    This error message can occur as a result of moving the Plugins folder to some other place that is different from the root of the          Assets folder.
@@ -32,9 +35,9 @@ public void Example()
    To solve this problem, restart the project.
 
 ## Notes
+ * If you need External access to files, then you need to set `Write Permission` to `Extarnal(SDCard)` in `Player Settings` of your project.
  * The example project was built using Unity 2019.2.11f1
  * A minimum API level of 16 and target API level of 29 was used during testing.
- * If you use the API level below 4.4.4 KitKat and you need External access to files, then you need to set `Write Permission` to `Extarnal(SDCard)` in `Player Settings` of your project.
  * If your project needs to make any changes to your `AndroidManifest.xml`, then consider that the Editor Script `PackageNameChanger.cs` monitors the changes in the Package Name of your project and makes these changes in Plugins/realese.aar/AndroidManifest.xml and Plugins/realese.aar/res/xml/filepaths.xml files
  * For the health of the asset, the Editor Script `PackageNameChanger.cs` located in the Editor folder is important. 
    ***Delete it only if you are not going to change the package name in the project anymore !!!***
