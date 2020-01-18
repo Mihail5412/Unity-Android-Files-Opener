@@ -24,6 +24,9 @@ public void Example()
  * **File release.aar not found**:
    The Editor Script `PackageNameChanger.cs`cannot find the release.aar archive in the Plugins folder. This error may occur if you          deleted, moved or renamed the release.aar file.
    To solve the problem, just re-import the asset.
+ * **System.IO.FileNotFoundException: Could not find file**:
+   While you changed the package name in the project, Editor Script `PackageNameChanger.cs` should change it in the Plugins/release.aar      files, but this did          not happen because the file named release.aar no longer exists in the Plugins/release.arr folder. 
+   To solve this problem, re-import the asset.
  * **Temp folder not found**.
    Editor Script `PackageNameChanger.cs` during the process of renaming the package name creates a Temp folder in the Plugins folder.        After the renaming process is complete, `PackageNameChanger.cs` will delete this folder itself. This error may occur if you were able    to remove it manually. 
    To solve this problem, restart the project.
