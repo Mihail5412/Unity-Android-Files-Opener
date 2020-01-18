@@ -19,7 +19,7 @@ public void Example()
 ```
 The demo project creates the "Test Documents" folder in /storage/emulated/0 and you need to allow external write permission. Open `Player Settings` in your project and change `Write Permission` to `External(SDCard)`.
 
-## Known errors:
+## Known Editor errors:
  * **Plugins folder not found**:
    The Editor Script `PackageNameChanger.cs` cannot find the Plugins folder in the root of the Assets folder.
    This error message can occur as a result of moving the Plugins folder to some other place that is different from the root of the          Assets folder.
