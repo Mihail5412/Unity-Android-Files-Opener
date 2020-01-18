@@ -17,14 +17,14 @@ public void Example()
 }
 ```
 ## Known errors:
- * Plugins folder not found:
+ * **Plugins folder not found**:
    The Editor Script `PackageNameChanger.cs` cannot find the Plugins folder in the root of the Assets folder.
    This error message can occur as a result of moving the Plugins folder to some other place that is different from the root of the          Assets folder.
    To solve the problem, just re-import the asset.
- * File release.aar not found:
+ * **File release.aar not found**:
    The Editor Script `PackageNameChanger.cs`cannot find the release.aar archive in the Plugins folder. This error may occur if you          deleted, moved or renamed the release.aar file.
    To solve the problem, just re-import the asset.
- * Temp folder not found.
+ * **Temp folder not found**.
    Editor Script `PackageNameChanger.cs` during the process of renaming the package name creates a Temp folder in the Plugins folder.        After the renaming process is complete, `PackageNameChanger.cs` will delete this folder itself. This error may occur if you were able    to remove it manually. 
    To solve this problem, restart the project.
 
